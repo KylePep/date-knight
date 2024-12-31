@@ -13,7 +13,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['MedievalSharp', ...defaultTheme.fontFamily.sans],
+                serif: ['Cinzel', ...defaultTheme.fontFamily.serif],
             },
         },
     },
