@@ -20,10 +20,10 @@ defineProps<{
 
 
                 <div class=" relative text-center font-bold text-outline mt-24">
-                    <span class="relative inset-0 font-cursive text-rose-500 text-7xl italic -me-6 z-10">
+                    <span class="relative inset-0 font-cursive text-rose-500 text-5xl italic -me-4 z-10">
                         Date
                     </span>
-                    <span class="text-8xl text-zinc-400">
+                    <span class="text-6xl text-zinc-400">
                         Knight
                     </span>
 
