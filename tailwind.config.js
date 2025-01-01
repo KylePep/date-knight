@@ -15,6 +15,7 @@ export default {
             fontFamily: {
                 sans: ['MedievalSharp', ...defaultTheme.fontFamily.sans],
                 serif: ['Cinzel', ...defaultTheme.fontFamily.serif],
+                cursive: ['Dancing Script', ...defaultTheme.fontFamily.mono]
             },
         },
     },
