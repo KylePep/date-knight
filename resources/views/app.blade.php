@@ -25,3 +25,87 @@
 </body>
 
 </html>
+
+<style>
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    .box {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, 0%, 0);
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 600px;
+        padding: 5px;
+        border: 2px solid #b78846;
+    }
+
+
+    .box:before,
+    .box:after {
+        content: "•";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        color: #b78846;
+        border: 2px solid #b78846;
+        line-height: 12px;
+        top: 5px;
+        text-align: center;
+    }
+
+    .box:before {
+        left: 5px;
+    }
+
+    .box:after {
+        right: 5px;
+    }
+
+    .box .box-inner {
+        position: relative;
+        border: 2px solid #b78846;
+        padding: 20px;
+    }
+
+    .box .box-inner:before,
+    .box .box-inner:after {
+        content: "•";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        color: #b78846;
+        border: 2px solid #b78846;
+        line-height: 12px;
+        bottom: -2px;
+        text-align: center;
+    }
+
+    .box .box-inner:before {
+        left: -2px;
+    }
+
+    .box .box-inner:after {
+        right: -2px;
+    }
+
+    .background-image {
+        background-color: rgb(37, 37, 97);
+    }
+
+    .text-outline {
+        color: white;
+        text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+</style>
