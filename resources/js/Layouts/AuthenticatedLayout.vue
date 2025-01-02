@@ -13,7 +13,7 @@ const showingNavigationDropdown = ref(false);
 <template>
     <div>
         <div class="min-h-screen background-image">
-            <nav class="border-b border-gray-500">
+            <nav class="border-b-8 border-white">
                 <!-- Primary Navigation Menu -->
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div class="flex h-16 justify-between">
@@ -42,7 +42,15 @@ const showingNavigationDropdown = ref(false);
                                 !showingNavigationDropdown
                                 "
                                 class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-150 ease-in-out focus:text-gray-500 focus:outline-none">
-                                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                <div class="h-10 w-10 border-2 mx-auto rounded-full" :style="{
+                                    backgroundImage: 'url(https://images.saymedia-content.com/.image/t_share/MTc2MjcyODU3Nzg4MDY0OTQx/why-vegeta-is-better-than-goku.jpg)',
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                    backgroundRepeat: 'no-repeat'
+                                }">
+
+                                </div>
+                                <!-- <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                     <path :class="{
                                         hidden: showingNavigationDropdown,
                                         'inline-flex':
@@ -55,7 +63,7 @@ const showingNavigationDropdown = ref(false);
                                             showingNavigationDropdown,
                                     }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                                </svg> -->
                             </button>
                         </div>
                     </div>
@@ -65,7 +73,7 @@ const showingNavigationDropdown = ref(false);
                 <div :class="{
                     block: showingNavigationDropdown,
                     hidden: !showingNavigationDropdown,
-                }">
+                }" class="absolute background-image w-full z-20 shadow-xl">
                     <div class="space-y-1 pb-3 pt-2">
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
@@ -100,7 +108,8 @@ const showingNavigationDropdown = ref(false);
 
             <!-- Page Heading -->
             <header v-if="$slots.header">
-                <div class="mx-auto max-w-7xl">
+                <div
+                    class="mx-auto max-w-7xl  border-b-4 py-2 text-4xl font-semibold leading-tight text-gray-200 text-center">
                     <slot name="header" />
                 </div>
             </header>

@@ -9,14 +9,14 @@ import { Head } from '@inertiajs/vue3';
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="text-4xl font-semibold leading-tight text-gray-400 text-center border-b-4 py-2">
+            <h2>
                 Dashboard
             </h2>
         </template>
 
         <div class="flex flex-col h-full mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden grid grid-cols-2 text-3xl">
-                <div class="py-6 text-gray-400 border-r-4 space-y-10">
+                <div class="py-14 text-gray-400 border-r-4 space-y-10">
                     <h3 class="text-center">USER</h3>
                     <div class="h-24 w-24 border-4 mx-auto rounded-full" :style="{
                         backgroundImage: 'url(https://images.saymedia-content.com/.image/t_share/MTc2MjcyODU3Nzg4MDY0OTQx/why-vegeta-is-better-than-goku.jpg)',
@@ -27,7 +27,7 @@ import { Head } from '@inertiajs/vue3';
 
                     </div>
                 </div>
-                <div class="py-6 text-gray-400  space-y-10">
+                <div class="py-14 text-gray-400  space-y-10">
                     <h3 class="text-center">PARTNER</h3>
                     <div class="relative h-24 w-24 border-4 mx-auto rounded-full">
                         <i
@@ -37,12 +37,12 @@ import { Head } from '@inertiajs/vue3';
             </div>
         </div>
 
-        <div class="absolute bottom-0 w-full flex justify-center pb-52">
-            <button class=" bg-white px-12 py-2 rounded">WAR!</button>
+        <div class="absolute bottom-0 w-full flex justify-center pb-44">
+            <button class="w-1/2 bg-white py-2 rounded">WAR!</button>
         </div>
 
-        <div class="absolute bottom-0 w-full flex justify-center pb-24">
-            <button class=" bg-white px-12 py-2 rounded">Create Date</button>
+        <div class="absolute bottom-0 w-full flex justify-center pb-20">
+            <button class="w-1/2 bg-white py-2 rounded">Create Date</button>
         </div>
 
     </AuthenticatedLayout>
