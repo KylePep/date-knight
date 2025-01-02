@@ -12,4 +12,9 @@ class DatesController extends Controller
 
         return Inertia::render('Dates/Create');
     }
+    public function show()
+    {
+
+        return Inertia::render('Dates/Show');
+    }
 }

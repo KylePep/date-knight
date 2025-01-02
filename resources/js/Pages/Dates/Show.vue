@@ -8,7 +8,7 @@ import { Head } from '@inertiajs/vue3';
   <AuthenticatedLayout>
     <template #header>
       <h2>
-        Dates Create
+        Dates Show
       </h2>
     </template>
   </AuthenticatedLayout>

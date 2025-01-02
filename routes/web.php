@@ -20,7 +20,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/dates', [DatesController::class, 'create'])->name('date.create');
+Route::get('/dates-create', [DatesController::class, 'create'])->name('date.create');
+Route::get('/dates-show', [DatesController::class, 'show'])->name('dates.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

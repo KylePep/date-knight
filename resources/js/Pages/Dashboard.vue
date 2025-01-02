@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 </script>
 
 <template>
@@ -42,7 +42,9 @@ import { Head } from '@inertiajs/vue3';
         </div>
 
         <div class="absolute bottom-0 w-full flex justify-center pb-20">
-            <button class="w-1/2 bg-white py-2 rounded">Create Date</button>
+            <Link :href="route('dates.show')" class="w-1/2 bg-white py-2 rounded text-center">
+            Create Date
+            </Link>
         </div>
 
     </AuthenticatedLayout>
