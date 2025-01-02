@@ -27,7 +27,7 @@
 </html>
 
 <style>
-    *:before,
+    /* *:before,
     *:after {
         box-sizing: border-box;
     }
@@ -93,10 +93,10 @@
 
     .box .box-inner:after {
         right: -2px;
-    }
+    } */
 
     .background-image {
-        background-color: rgb(37, 37, 97);
+        background-color: rgb(26, 26, 26);
     }
 
     .text-outline {

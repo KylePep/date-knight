@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-    <label class="block text-sm text-amber-500 font-bold">
+    <label class="block text-sm text-gray-500 font-bold">
         <span v-if="value">{{ value }}</span>
         <span v-else>
             <slot />

@@ -1,3 +1,4 @@
+import '@mdi/font/css/materialdesignicons.css'
 import '../css/app.css';
 import './bootstrap';
 
