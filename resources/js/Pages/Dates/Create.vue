@@ -1,6 +1,16 @@
 <script setup>
+import InputError from '@/Components/InputError.vue';
+import InputLabel from '@/Components/InputLabel.vue';
+import TextInput from '@/Components/TextInput.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { useForm } from "@inertiajs/vue3";
+
+const form = useForm({
+  title: '',
+  description: '',
+  type: '',
+})
+
 </script>
 
 
@@ -11,6 +21,104 @@ import { Head } from '@inertiajs/vue3';
         Dates Create
       </h2>
     </template>
+
+
+    <div class="h-full mx-auto max-w-7xl sm:px-6 lg:px-8 bg-blue-500">
+
+      <div class="overflow-hidden grid grid-cols-2 text-3xl">
+        <div class="flex flex-col text-gray-400 border-r-4 min-h-64 px-2">
+
+          <div class="mt-4">
+            <InputLabel for="title" value="Title" />
+
+            <TextInput id="title" type="text" class="mt-1 block w-full" v-model="form.title" required
+              autocomplete="current-title" />
+
+            <InputError class="mt-2" :message="form.errors.title" />
+          </div>
+
+          <div class="mt-4 flex flex-col flex-1">
+            <InputLabel for="description" value="Description" />
+
+            <textarea id="description" type="description" class="h-full w-full rounded" />
+
+            <InputError class="mt-2" :message="form.errors.description" />
+          </div>
+
+        </div>
+
+        <div class="text-gray-400 px-2 flex flex-col justify-between">
+
+          <div class="mt-4 min-h-32 border-2 border-white flex items-center justify-center">
+            Icon
+          </div>
+
+          <div class="flex gap-1">
+            <div v-for="index in 5" class="h-8 w-full border border-white">
+
+            </div>
+
+          </div>
+
+          <div class="flex items-center justify-between w-full bg-white px-1 rounded">
+            <span class="text-gray-800">Color</span>
+            <input type="color" id="color" class="me-2">
+          </div>
+        </div>
+      </div>
+
+      <div class=" mt-4 mx-2">
+        <div class="flex justify-between items-center gap-4">
+          <InputLabel for="type" value="Type" />
+
+          <div class="w-full">
+            <TextInput id="type" type="text" class="mt-1 block w-full" v-model="form.type" required
+              autocomplete="current-type" />
+            <InputError class="mt-2" :message="form.errors.type" />
+          </div>
+
+        </div>
+
+        <div class="mt-4 flex border-2 border-white">
+
+          <div class="border-r-2 px-2 w-full text-center">
+            <i v-for="index in 3" class="mdi mdi-heart text-white text-xl px-1"></i>
+          </div>
+          <div class="border-r-2 px-2 w-full text-center">
+            <i v-for="index in 3" class="mdi mdi-currency-usd text-white text-xl px-1"></i>
+          </div>
+          <div class="border-r-2 px-2 w-full text-center">
+            <i v-for="index in 3" class="mdi mdi-clock text-white text-xl px-1"></i>
+          </div>
+
+        </div>
+
+        <div class="text-white text-xl mt-4">
+          Cost: Z
+        </div>
+
+        <div class="grid grid-cols-3 text-white text-xl mt-4">
+          <div class="">
+            Movement
+            <div class="flex">
+              <div v-for="index in 3" :class="index < 3 ? 'bg-gray-600' : ''"
+                class=" h-10 w-full border-2 border-white">
+              </div>
+            </div>
+          </div>
+          <div class="col-start-3">
+            <div class="flex justify-center"><i class="mdi mdi-sword"></i> / <i class="mdi mdi-security"></i></div>
+            <div class=" border-2 border-white text-center">
+              x / y
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
   </AuthenticatedLayout>
 </template>
 

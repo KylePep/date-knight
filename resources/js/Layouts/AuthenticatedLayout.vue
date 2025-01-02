@@ -11,7 +11,7 @@ const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
-    <div class="min-h-screen background-image">
+    <div class="min-h-screen flex flex-col background-image">
         <nav class="border-b-8 border-white">
             <!-- Primary Navigation Menu -->
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -113,7 +113,7 @@ const showingNavigationDropdown = ref(false);
         </header>
 
         <!-- Page Content -->
-        <main>
+        <main class="flex-1 bg-red-500">
             <slot />
         </main>
     </div>
