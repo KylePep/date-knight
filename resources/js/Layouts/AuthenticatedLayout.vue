@@ -78,7 +78,7 @@ const showingNavigationDropdown = ref(false);
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </ResponsiveNavLink>
-                        <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dates')">
+                        <ResponsiveNavLink :href="route('date.create')" :active="route().current('date.create')">
                             Dates
                         </ResponsiveNavLink>
                     </div>
