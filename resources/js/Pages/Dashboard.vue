@@ -38,11 +38,13 @@ import { Head, Link } from '@inertiajs/vue3';
         </div>
 
         <div class="absolute bottom-0 w-full flex justify-center pb-44">
-            <button class="w-1/2 bg-white py-2 rounded">WAR!</button>
+            <Link :href="route('tiffle.index')" class="w-1/2 bg-white py-2 rounded text-center">
+            Tiffle!
+            </Link>
         </div>
 
         <div class="absolute bottom-0 w-full flex justify-center pb-20">
-            <Link :href="route('dates.show')" class="w-1/2 bg-white py-2 rounded text-center">
+            <Link :href="route('date.create')" class="w-1/2 bg-white py-2 rounded text-center">
             Create Date
             </Link>
         </div>
