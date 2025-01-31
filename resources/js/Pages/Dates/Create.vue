@@ -23,10 +23,10 @@ const form = useForm({
     </template>
 
 
-    <div class="h-full mx-auto max-w-7xl sm:px-6 lg:px-8 bg-blue-500">
+    <div class="h-full mx-auto max-w-7xl sm:px-6 lg:px-8">
 
       <div class="overflow-hidden grid grid-cols-2 text-3xl">
-        <div class="flex flex-col text-gray-400 border-r-4 min-h-64 px-2">
+        <div class="flex flex-col justify-between text-gray-400 border-r-4 min-h-64 px-2">
 
           <div class="mt-4">
             <InputLabel for="title" value="Title" />
@@ -49,9 +49,13 @@ const form = useForm({
 
         <div class="text-gray-400 px-2 flex flex-col justify-between">
 
-          <div class="mt-4 min-h-32 border-2 border-white flex items-center justify-center">
-            Icon
+          <div class="mt-4 ">
+            <div class="text-base">Icon</div>
+            <div class="min-h-32 border-2 border-white flex items-center justify-center rounded">
+              Icon
+            </div>
           </div>
+
 
           <div class="flex gap-1">
             <div v-for="index in 5" class="h-8 w-full border border-white">
@@ -67,7 +71,8 @@ const form = useForm({
         </div>
       </div>
 
-      <div class=" mt-4 mx-2">
+      <div class="mt-8 mx-2 space-y-8">
+
         <div class="flex justify-between items-center gap-4">
           <InputLabel for="type" value="Type" />
 

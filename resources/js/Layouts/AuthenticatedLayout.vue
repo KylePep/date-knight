@@ -113,7 +113,7 @@ const showingNavigationDropdown = ref(false);
         </header>
 
         <!-- Page Content -->
-        <main class="flex-1 bg-red-500">
+        <main class="flex-1">
             <slot />
         </main>
     </div>

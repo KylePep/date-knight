@@ -22,7 +22,7 @@ defineProps<{
             </h2>
         </template>
 
-        <div class="py-12">
+        <div class="py-12 px-4">
             <div class="mx-auto max-w-7xl space-y-6 sm:px-6 lg:px-8">
                 <div class='box'>
                     <div class='box-inner'>

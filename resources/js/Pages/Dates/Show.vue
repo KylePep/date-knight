@@ -38,7 +38,7 @@ import { Head, Link } from '@inertiajs/vue3';
       </div>
     </div>
 
-    <div class="sticky bottom-0 w-full flex justify-center pb-20 bg-black">
+    <div class="sticky bottom-0 w-full flex justify-center py-6 bg-black">
       <Link :href="route('date.create')" class="w-1/2 bg-white py-2 rounded text-center">
       Create Date
       </Link>
