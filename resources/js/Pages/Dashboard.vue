@@ -3,6 +3,7 @@ import InputError from "@/Components/InputError.vue";
 import InputLabel from "@/Components/InputLabel.vue";
 import Modal from "@/Components/Modal.vue";
 import PrimaryButton from "@/Components/PrimaryButton.vue";
+import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
 import SecondaryButton from "@/Components/SecondaryButton.vue";
 import TextInput from "@/Components/TextInput.vue";
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
@@ -57,14 +58,16 @@ const closeModal = () => {
             <div class="overflow-hidden grid grid-cols-2 text-3xl">
                 <div class="py-14 text-gray-400 border-r-4 space-y-10">
                     <h3 class="text-center">USER</h3>
+                    <Link :href="route('profile.edit')" class="flex">
                     <div class="h-24 w-24 border-4 mx-auto rounded-full" :style="{
                         backgroundImage: 'url(https://images.saymedia-content.com/.image/t_share/MTc2MjcyODU3Nzg4MDY0OTQx/why-vegeta-is-better-than-goku.jpg)',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat'
                     }">
-
                     </div>
+                    </Link>
+
                 </div>
                 <div class="py-14 text-gray-400  space-y-10">
                     <h3 class="text-center">PARTNER</h3>
