@@ -1,6 +1,8 @@
 <script setup>
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
+import PrimaryButton from "@/Components/PrimaryButton.vue";
+import SecondaryButton from "@/Components/SecondaryButton.vue";
 import TextInput from '@/Components/TextInput.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { useForm } from "@inertiajs/vue3";
@@ -15,18 +17,23 @@ const form = useForm({
 
 
 <template>
-  <AuthenticatedLayout>
-    <template #header>
-      <h2>
-        Dates Create
-      </h2>
-    </template>
+  <div class="flex flex-col min-h-screen bg-black">
+    <AuthenticatedLayout>
+      <template #header>
+        <h2>
+          Dates Create
+        </h2>
+      </template>
 
 
-    <div class="h-full mx-auto max-w-7xl sm:px-6 lg:px-8">
+
+
+
+    </AuthenticatedLayout>
+    <div class="flex flex-col justify-between flex-1 bg-black">
 
       <div class="overflow-hidden grid grid-cols-2 text-3xl">
-        <div class="flex flex-col justify-between text-gray-400 border-r-4 min-h-64 px-2">
+        <div class="flex flex-col justify-between text-gray-400 border-r-4 px-2">
 
           <div class="mt-4">
             <InputLabel for="title" value="Title" />
@@ -47,7 +54,7 @@ const form = useForm({
 
         </div>
 
-        <div class="text-gray-400 px-2 flex flex-col justify-between">
+        <div class="text-gray-400 px-2 flex flex-col justify-between space-y-2">
 
           <div class="mt-4 ">
             <div class="text-base">Icon</div>
@@ -65,13 +72,13 @@ const form = useForm({
           </div>
 
           <div class="flex items-center justify-between w-full bg-white px-1 rounded">
-            <span class="text-gray-800">Color</span>
+            <span class="text-gray-800 text-base">Color</span>
             <input type="color" id="color" class="me-2">
           </div>
         </div>
       </div>
 
-      <div class="mt-8 mx-2 space-y-8">
+      <div class="mt-8 mx-2 space-y-4">
 
         <div class="flex justify-between items-center gap-4">
           <InputLabel for="type" value="Type" />
@@ -121,11 +128,14 @@ const form = useForm({
 
       </div>
 
+      <div class="flex justify-end space-x-4">
+        <PrimaryButton>Create</PrimaryButton>
+        <SecondaryButton>Cancel</SecondaryButton>
+      </div>
+
     </div>
-
-
-  </AuthenticatedLayout>
+  </div>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style scoped></style>
