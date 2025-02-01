@@ -5,6 +5,9 @@ import { Head, Link } from '@inertiajs/vue3';
 
 
 <template>
+
+  <Head title="Dates" />
+
   <AuthenticatedLayout>
     <template #header>
       <h2>

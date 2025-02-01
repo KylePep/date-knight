@@ -2,10 +2,9 @@
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from "@/Components/PrimaryButton.vue";
-import SecondaryButton from "@/Components/SecondaryButton.vue";
 import TextInput from '@/Components/TextInput.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Link, useForm } from "@inertiajs/vue3";
+import { Head, Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
   title: '',
@@ -17,6 +16,8 @@ const form = useForm({
 
 
 <template>
+
+  <Head title="Date" />
   <div class="flex flex-col min-h-screen bg-black">
     <AuthenticatedLayout>
       <template #header>
