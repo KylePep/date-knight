@@ -5,7 +5,7 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 import SecondaryButton from "@/Components/SecondaryButton.vue";
 import TextInput from '@/Components/TextInput.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { useForm } from "@inertiajs/vue3";
+import { Link, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
   title: '',
@@ -126,7 +126,9 @@ const form = useForm({
 
       <div class="flex justify-end space-x-4">
         <PrimaryButton>Create</PrimaryButton>
-        <SecondaryButton>Cancel</SecondaryButton>
+        <Link :href="route('dashboard')" class="w-1/2 bg-white py-2 rounded text-center">
+        Cancel
+        </Link>
       </div>
 
     </div>
