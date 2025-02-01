@@ -86,6 +86,12 @@ const closeModal = () => {
                 </Link>
             </div>
 
+            <div class="w-full flex justify-center">
+                <Link :href="route('dates.show')" class="w-1/2 bg-white py-2 rounded text-center">
+                Dates
+                </Link>
+            </div>
+
             <div class="w-full flex justify-center mb-16">
                 <Link :href="route('date.create')" class="w-1/2 bg-white py-2 rounded text-center">
                 Create Date

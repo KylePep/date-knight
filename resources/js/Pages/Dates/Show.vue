@@ -38,9 +38,12 @@ import { Head, Link } from '@inertiajs/vue3';
       </div>
     </div>
 
-    <div class="sticky bottom-0 w-full flex justify-center py-6 bg-black">
+    <div class="sticky bottom-0 w-full flex justify-center p-6 space-x-2 bg-black">
       <Link :href="route('date.create')" class="w-1/2 bg-white py-2 rounded text-center">
       Create Date
+      </Link>
+      <Link :href="route('dashboard')" class="w-1/2 bg-white py-2 rounded text-center">
+      Cancel
       </Link>
     </div>
   </AuthenticatedLayout>
