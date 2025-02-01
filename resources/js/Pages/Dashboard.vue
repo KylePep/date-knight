@@ -46,15 +46,17 @@ const closeModal = () => {
 <template>
 
     <Head title="Dashboard" />
+    <div class="flex flex-col min-h-screen bg-black">
+        <AuthenticatedLayout>
+            <template #header>
+                <h2>
+                    Dashboard
+                </h2>
+            </template>
+        </AuthenticatedLayout>
 
-    <AuthenticatedLayout>
-        <template #header>
-            <h2>
-                Dashboard
-            </h2>
-        </template>
 
-        <div class="flex flex-col h-full mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex flex-col flex-1 justify-between mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden grid grid-cols-2 text-3xl">
                 <div class="py-14 text-gray-400 border-r-4 space-y-10">
                     <h3 class="text-center">USER</h3>
@@ -77,21 +79,21 @@ const closeModal = () => {
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="absolute bottom-0 w-full flex justify-center pb-44">
-            <Link :href="route('tiffle.index')" class="w-1/2 bg-white py-2 rounded text-center">
-            Tiffle!
-            </Link>
-        </div>
+            <div class="w-full flex justify-center">
+                <Link :href="route('tiffle.index')" class="w-1/2 bg-white py-2 rounded text-center">
+                Tiffle!
+                </Link>
+            </div>
 
-        <div class="absolute bottom-0 w-full flex justify-center pb-20">
-            <Link :href="route('date.create')" class="w-1/2 bg-white py-2 rounded text-center">
-            Create Date
-            </Link>
+            <div class="w-full flex justify-center mb-16">
+                <Link :href="route('date.create')" class="w-1/2 bg-white py-2 rounded text-center">
+                Create Date
+                </Link>
+            </div>
         </div>
+    </div>
 
-    </AuthenticatedLayout>
     <Modal :show="confirmingAddPartner" @close="closeModal">
         <div class="p-6">
             <h2 class="text-lg font-medium text-gray-900">

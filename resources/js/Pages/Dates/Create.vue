@@ -24,12 +24,8 @@ const form = useForm({
           Dates Create
         </h2>
       </template>
-
-
-
-
-
     </AuthenticatedLayout>
+
     <div class="flex flex-col justify-between flex-1 bg-black">
 
       <div class="overflow-hidden grid grid-cols-2 text-3xl">
