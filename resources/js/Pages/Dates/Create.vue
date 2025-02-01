@@ -31,7 +31,7 @@ const form = useForm({
       <div class="overflow-hidden grid grid-cols-2 text-3xl">
         <div class="flex flex-col justify-between text-gray-400 border-r-4 px-2">
 
-          <div class="mt-4">
+          <div class="mt-2">
             <InputLabel for="title" value="Title" />
 
             <TextInput id="title" type="text" class="mt-1 block w-full" v-model="form.title" required
@@ -52,7 +52,7 @@ const form = useForm({
 
         <div class="text-gray-400 px-2 flex flex-col justify-between space-y-2">
 
-          <div class="mt-4 ">
+          <div class="mt-2 ">
             <div class="text-base">Icon</div>
             <div class="min-h-32 border-2 border-white flex items-center justify-center rounded">
               Icon
@@ -74,7 +74,7 @@ const form = useForm({
         </div>
       </div>
 
-      <div class="mt-8 mx-2 space-y-4">
+      <div class="mx-2 space-y-4">
 
         <div class="flex justify-between items-center gap-4">
           <InputLabel for="type" value="Type" />
@@ -87,7 +87,7 @@ const form = useForm({
 
         </div>
 
-        <div class="mt-4 flex border-2 border-white">
+        <div class="flex border-2 border-white">
 
           <div class="border-r-2 px-2 w-full text-center">
             <i v-for="index in 3" class="mdi mdi-heart text-white text-xl px-1"></i>
@@ -101,11 +101,11 @@ const form = useForm({
 
         </div>
 
-        <div class="text-white text-xl mt-4">
+        <div class="text-white text-xl">
           Cost: Z
         </div>
 
-        <div class="grid grid-cols-3 text-white text-xl mt-4">
+        <div class="grid grid-cols-3 text-white text-xl">
           <div class="">
             Movement
             <div class="flex">
@@ -124,9 +124,9 @@ const form = useForm({
 
       </div>
 
-      <div class="flex justify-end space-x-4">
+      <div class="flex justify-end space-x-4 pb-4 mx-2">
         <PrimaryButton>Create</PrimaryButton>
-        <Link :href="route('dashboard')" class="w-1/2 bg-white py-2 rounded text-center">
+        <Link :href="route('dashboard')" class="w-1/4 bg-white py-2 rounded text-center">
         Cancel
         </Link>
       </div>
