@@ -56,7 +56,7 @@ const closeModal = () => {
         </AuthenticatedLayout>
 
 
-        <div class="flex flex-col flex-1 justify-between mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex flex-col flex-1 justify-between">
             <div class="overflow-hidden grid grid-cols-2 text-3xl">
                 <div class="py-14 text-gray-400 border-r-4 space-y-10">
                     <h3 class="text-center">USER</h3>
